@@ -1,0 +1,944 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: visible !important;
+}
+
+::-webkit-scrollbar {
+  width:0; /* Width of the scrollbar (optional) */
+  background-color: transparent; /* Background color behind the scrollbar (optional) */
+}
+
+.font_roboto{
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Start of Carousel Section  */
+.carousel_outer_div {
+height: 80vh;
+position: relative;
+overflow: hidden;
+width: 100%;
+}
+
+.carousel_control_div {
+position: absolute;
+top: 50%;
+width: 50px;
+height: 50px;
+transform: translate(0, -50%);
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+color: #000000;
+font-size: 2rem;
+transition: all 500ms;
+}
+
+.carousel_left {
+left: 4%;
+}
+
+.carousel_right {
+right: 4%;
+}
+
+.carousel_control_div:hover {
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel_nav_div {
+position: absolute;
+bottom: 8%;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+flex-wrap: nowrap;
+gap: 20px;
+}
+
+.carousel_navs {
+height: 10px;
+width: 10px;
+border: solid 1px #ffffff;
+border-radius: 50%;
+transition: all 250ms;
+}
+
+.carousel_navs:hover {
+background-color: #ffffff;
+}
+
+.carousel_nav_active {
+background-color: #ffffff;
+transform: scale(1.5, 1.5);
+}
+
+.carousel_slides {
+display: flex;
+transition: transform 0.5s ease;
+width: 100%;
+height: 100%;
+flex: 0 0 100%;
+}
+
+.carousel_slide {
+flex: 0 0 100%;
+width: 100%;
+height: 100%;
+}
+
+.carousel_layout_div {
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: nowrap;
+box-sizing: border-box;
+transform: translateX(-100%);
+}
+
+.carousel_image_div {
+width: 100%;
+height: 100%;
+flex: 0 0 100%;
+}
+
+.carousel_layout_div_slide {
+width: 100%;
+height: 100%;
+display: flex;
+flex-wrap: nowrap;
+box-sizing: border-box;
+}
+
+.carousel_image_div_slide {
+width: 100%;
+width: 33%;
+height: 100%;
+}
+
+/* End of Carousel Section */
+
+/* Start of Home Section */
+
+.home_sections{
+  margin: 30px 0;
+}
+
+.home_heading{
+  color: #333333;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+  margin-bottom: 16px;
+}
+
+.home_banner{
+  width: 100%;
+  height: 104px;
+  margin: 40px 0;
+}
+
+.home_see_all{
+  background-color: transparent;
+  border: none;
+  color: #dc3558;
+  font-size: 14px;
+}
+
+.home_section_title_div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* End of Home Section */
+
+/* Start of Event Card Section */
+
+.event_image_rating_div{
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.event_image_div{
+  width: 100%;
+  height: 88%;
+}
+
+.event_image{
+  height: 100%;
+  width: 100%;
+}
+
+.event_rating_div{
+  width: 100%;
+  height: 12%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event_rating{
+  color: #969696;
+  font-size: 20px;
+  margin: 0;
+}
+
+.event_info_div{
+  padding: 10px 0;
+}
+
+.event_name{
+  color: #222222;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.33;
+  margin-top: 8px;
+}
+
+.event_roboto{
+  color: #666666;
+  font-size: 16px;
+}
+
+/* End of Event Card Section */
+
+.page_head{
+  color: #333333;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+
+/* Start of Event Page */
+
+.event_page_back{
+  width: 100%;
+  background-color: #1a1a1a;
+  height: 50vh;
+  position: relative;
+}
+
+.event_back_image_div{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+.event_back_shadow_div_right{
+  position: absolute;
+  top: 0;
+  left: 76%;
+  width: 4%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #1a1a1a);
+  z-index: 10;
+}
+
+.event_back_shadow_div_left{
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 24%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #1a1a1a);
+  z-index: 10;
+}
+
+.event_main_div{
+  position: absolute;
+  width: 64%;
+  height: 70%;
+  top: 15%;
+  left: 18%;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 15;
+}
+
+.event_main_image_div{
+  width: 20%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.event_main_info_div{
+  width: 80%;
+  height: 100%;
+  padding: 10px 30px;
+}
+
+.event_main_name{
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.event_main_para{
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.event_main_para_sec{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  word-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.book_now_button{
+  margin-top: 30px;
+  background-color: #f84464;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 500ms;
+  border: solid 1px #f84464;
+}
+
+.book_now_button:hover{
+  color: #f84464;
+  background-color: transparent;
+}
+
+.housefull_msg{
+  margin-top: 30px;
+  color: #dc3558;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.event_page_about_head{
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.event_page_about_description{
+  font-size: 16px;
+  color: #333333;
+}
+
+.event_page_section_div{
+  border-bottom: solid 1px #e5e5e5;
+  padding: 30px 0;
+}
+
+.event_page_container_div{
+  width: 100%;
+  height: 84vh;
+  overflow-y: hidden;
+}
+
+.event_page_dark_div{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #000000c5;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking_outer_div{
+  width: 35%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking_close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.close{
+  color: #f84464;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.booking_vehicle_div{
+  width: 30%;
+  margin: 20px auto;
+}
+
+.booking_vehicle{
+  width: 100%;
+}
+
+.booking_seat_div{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking_seat_button{
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  font-size: 15px;
+  line-height: 32px;
+  transition: all 500ms;
+}
+
+.booking_seat_button:hover{
+  background-color: #f84464;
+  color: #ffffff;
+}
+
+.booking_seat_active_button{
+  background-color: #f84464;
+  color: #ffffff;
+}
+
+.booking_head{
+  text-align: center;
+  font-size: 16px;
+  margin-top: 38px;
+  margin-bottom: 0;
+}
+
+.booking_details_div{
+  width: 90%;
+  margin: 30px auto 40px auto;
+  border-top: solid 2px #f5f5f5b3;
+}
+
+.booking_price{
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
+.booking_status{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.available{
+  color: #2ec492;
+}
+
+.not_available{
+  color: #dc3558;
+}
+
+.booking_pay_button{
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+/* End of Event Page */
+
+/* Start of Login Page */
+
+.login_main_div{
+  width: 60%;
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.hi_div{
+  height: 80px;
+  background: linear-gradient(98.18deg, rgb(43, 49, 72) 2.87%, rgb(136, 63, 85) 59.96%, rgb(235, 78, 98) 98.36%);
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.hi_message{
+  font-size: 34px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* End of Login Page */
+
+.input_tag_div{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.error_msg{
+  color: #ff0000;
+}
+
+.input_tag_label{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.input_tag_input{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: solid 1px #cccccc;
+  outline: none;
+}
+
+.button_filled{
+  color: #ffffff;
+  background-color: #f84464;
+  border: solid 1px #f84464;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 16px;
+}
+
+.button_outline{
+  color: #f84464;
+  border: solid 1px #f84464;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 16px;
+}
+
+.loading_bar{
+  background: linear-gradient(98.18deg, rgb(43, 49, 72) 2.87%, rgb(136, 63, 85) 59.96%, rgb(235, 78, 98) 98.36%);
+  height: 4px;
+  transition: width 4s ease;
+  position: sticky;
+  top: 0;
+}
+
+.long_button{
+  width: 80%;
+  margin: 25px auto;
+  display: block;
+}
+
+.or_tag{
+  color: #666666;
+  font-size: 15px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* Start of Logo Navbar */
+
+.nav_logo_outer_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #333545;
+}
+
+.nav_logo_side_div {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.nav_logo_center_div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.nav_logo_side_div_2 {
+  order: 2;
+}
+
+.nav_logo_logo{
+  color: #e5e5e5;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* End of Logo Navbar */
+
+/* Start of Search Section */
+
+.search_div{
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.search_box{
+  width: 90%;
+  border: solid 1px #333545;
+  border-radius: 8px 0 0 8px;
+  padding-left: 10px;
+  outline: none;
+  font-size: 20px;
+}
+
+.search_button{
+  width: 10%;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  background-color: #f84464;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* End of Search Section */
+
+/* Start of Category Navbar */
+
+.navcat_container_div{
+  width: 100%;
+  overflow: scroll;
+  padding-top: 10px;
+  padding-bottom: 0;
+  border-bottom: solid 1px #333545;
+  background-color: #1f2533;
+}
+
+.navcat_outer_div{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.navcat_inner_div{
+  width: 20%;
+}
+
+.navcat_head{
+  font-size: 20px;
+  color: #ffffff;
+  transition: all 500ms;
+}
+
+.navcat_icon{
+  font-size: 28px;
+  color: #f84464;
+  margin-right: 8px;
+}
+
+.navcat_inner_div:hover .navcat_head{
+  color: #f84464;
+}
+
+/* End of Category Navbar */
+
+/* Start of Booking Section */
+
+.booking_main_div{
+  width: 60%;
+  background-color: #ffffff;
+  margin: 30px auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.booking_event_div{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 40px;
+  border-bottom: solid 1px #333545;
+}
+
+.booking_event_image_div{
+  width: 30%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.booking_event_details_div{
+  width: 70%;
+  padding: 40px;
+}
+
+.booking_event_head{
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.booking_event_para{
+  font-size: 18px;
+  color: #666666;
+  font-weight: 400;
+}
+
+.booking_ticket_div{
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.booking_ticket_seat_div{
+  width: 30%;
+}
+
+.booking_ticket_price_div{
+  width: 70%;
+  padding: 30px 40px;
+}
+
+.booking_ticket_no{
+  color: #f84464;
+  font-size: 60px;
+  text-align: center;
+}
+
+.booking_ticket_price{
+  font-size: 24px;
+  line-height: 30px;
+  color: #222222;
+}
+
+.booking_show_div{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+}
+
+.left{
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.right{
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* End of Booking Section */
+
+/* Start of Alert Section */
+
+.alert_outer_div{
+  width: 60%;
+  position: fixed;
+  top: 5%;
+  z-index: 30;
+  background-color: #2ec492;
+  border-radius: 8px;
+  padding: 10px;
+  left: 20%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.alert_head{
+  color: #ffffff;
+  margin: 0;
+  margin-left: 30px;
+  font-size: 32px;
+}
+
+.alert_close_button{
+  background-color: transparent !important;
+  color: #ffffff;
+  font-size: 30px;
+  border: none;
+  margin-right: 10px;
+}
+
+/* End of Alert Section */
+
+.no_activity_message{
+  font-size: 32px;
+  color: #222222;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+  .navcat_outer_div{
+    width: 55%;
+  }
+  .event_main_div{
+    width: 70%;
+    left: 15%;
+  }
+  .event_page_back{
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .navcat_outer_div{
+    width: 70%;
+  }
+  .event_main_div{
+    width: 90%;
+    left: 10%;
+  }
+  .event_page_back{
+    height: 70vh;
+  }
+  .booking_outer_div{
+    width: 45%;
+  }
+  .login_main_div{
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+  .nav_logo_side_div,
+  .nav_logo_center_div {
+    width: 60%;
+    order: 1;
+    padding: 12px;
+  }
+  .nav_logo_center_div {
+    order: 2;
+  }
+  .nav_logo_side_div_2{
+    width: 40%;
+  }
+  .nav_logo_center_div {
+    width: 100%;
+  } 
+  .home_banner{
+    height: 80px;
+  }
+  .navcat_outer_div{
+    width: 100%;
+  }
+  .event_main_image_div{
+    width: 30%;
+  }
+  .event_main_info_div{
+    width: 70%;
+  }
+  .event_page_back{
+    height: 80vh;
+  }
+  .event_main_div{
+    top: 5%;
+    height: 80%;
+  }
+  .booking_outer_div{
+    width: 60%;
+  }
+  .booking_main_div{
+    width: 75%;
+  }
+  .login_main_div{
+    width: 75%;
+  }
+  .input_tag_div{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .nav_logo_side_div,
+  .nav_logo_center_div {
+    width: 60%;
+    order: 1;
+    padding: 12px;
+  }
+  .nav_logo_center_div {
+    order: 2;
+  }
+  .nav_logo_side_div_2{
+    width: 40%;
+  }
+  .nav_logo_center_div {
+    width: 100%;
+  } 
+  .navcat_outer_div{
+    width: 180%;
+  }
+  .navcat_head{
+    font-size: 20px;
+  }
+  .navcat_icon{
+    font-size: 24px;
+  }
+  .home_banner{
+    height: 60px;
+  }
+  .search_div{
+    width: 90%;
+  }
+  .event_main_div{
+    width: 90%;
+    left: 5%;
+    top: 8%;
+  }
+  .event_main_image_div{
+    width: 40%;
+  }
+  .event_main_info_div{
+    width: 60%;
+  }
+  .event_page_back{
+    height: 80vh;
+  }
+  .booking_outer_div{
+    width: 90%;
+  }
+  .booking_main_div{
+    width: 95%;
+  }
+  .login_main_div{
+    width: 90%;
+  }
+  .input_tag_div{
+    width: 90%;
+  }
+}
