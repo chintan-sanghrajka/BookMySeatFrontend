@@ -10,7 +10,6 @@ export const getHomeMovies = createAsyncThunk(
         categoryId: args,
         limit: 4,
         keys: "",
-        page: 1,
         reqType: "cat",
       });
       return res.data.eventList;
@@ -28,7 +27,6 @@ export const getHomeSports = createAsyncThunk(
         categoryId: args,
         limit: 4,
         keys: "",
-        page: 1,
         reqType: "cat",
       });
       return res.data.eventList;

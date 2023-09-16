@@ -55,8 +55,6 @@ const NewCarousel = () => {
     return (
         <>
             <div className='carousel_outer_div'>
-                {/* <img src={images[index].url} alt="" className='w-100 h-100' /> */}
-
                 <div className='carousel_slides' style={slideStyles}>
                     {images.map((element, index) => (
                         <img key={index} src={element.url} alt="" className='carousel_slide' />

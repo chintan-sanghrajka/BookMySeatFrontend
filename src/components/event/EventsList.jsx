@@ -10,25 +10,12 @@ import NavCat from './../navbar/NavCat.jsx';
 const EventsList = () => {
     const dispatch = useDispatch();
     const { reqType, argument } = useParams();
-    const [page, setPage] = useState(10);
-    useEffect(() => {
-        dispatch(getEventList({ reqType, argument, page }))
-    }, [dispatch, reqType, argument, page])
-    const eventList = useSelector(state => state.eventList.eventsList)
-    // const handleScroll = () => {
-    //     console.log("Hii")
-    //     if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) {
-    //         return;
-    //     }
-    //     setPage(page + 2)
-    //     dispatch(getEventList({ categoryId, page }))
-    // };
 
     useEffect(() => {
-        // window.addEventListener('scroll', handleScroll);
-        // return () => window.removeEventListener('scroll', handleScroll);
-        setPage(10)
-    }, []);
+        dispatch(getEventList({ reqType, argument }))
+    }, [reqType, argument])
+    const eventList = useSelector(state => state.eventList.eventsList)
+
     return (
         <>
             <NavLogo />

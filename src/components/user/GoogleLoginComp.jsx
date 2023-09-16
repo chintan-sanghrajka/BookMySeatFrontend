@@ -22,7 +22,6 @@ const GoogleLoginComp = () => {
     }, [user, profile])
 
     const addUser = async () => {
-        // console.log(profile)
         await axios.post(`${BASE_URL}google-login`, {
             firstName: profile.given_name,
             lastName: profile.family_name,

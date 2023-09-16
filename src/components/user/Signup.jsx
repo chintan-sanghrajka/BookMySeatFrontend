@@ -172,7 +172,6 @@ const Signup = () => {
                             role: 2,
                             address: data.address,
                         }).then((res) => {
-                            console.log(res)
                             navigate('/login');
                         }).catch(error => console.log(error.message))
                     }

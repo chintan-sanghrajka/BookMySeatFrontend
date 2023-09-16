@@ -26,6 +26,7 @@ const EventPage = () => {
     const [noSeat, setNoSeat] = useState(1);
     const [showAlert, setShowAlert] = useState(false)
     const seatArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const limit = 4;
     useEffect(() => {
         dispatch(getEvent(eventId))
     }, [dispatch, eventId])

@@ -24,7 +24,6 @@ export const getMoreEvent = createAsyncThunk(
         categoryId: "",
         keys: args,
         reqType: "keys",
-        page: 1,
         limit: 4,
       });
       return res.data.eventList;

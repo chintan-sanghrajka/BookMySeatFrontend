@@ -42,7 +42,6 @@ const Login = () => {
             setLoadingWidth("70%")
             axios.post(`${BASE_URL}login/`, { userName: data.username, password: data.password, action: "password" }
             ).then((res) => {
-                // console.log(res.data)
                 if (res.data.id === 1) {
                     setInvalidUsername(true)
                     setLoadingWidth("0")

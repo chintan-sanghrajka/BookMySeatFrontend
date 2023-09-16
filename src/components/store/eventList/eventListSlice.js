@@ -18,7 +18,6 @@ export const eventListSlice = createSlice({
     },
     [getEventList.fulfilled]: (state, action) => {
       state.isLoading = false;
-      // state.eventsList = [...state.eventsList, ...action.payload];
       state.eventsList = action.payload;
     },
     [getEventList.rejected]: (state, action) => {

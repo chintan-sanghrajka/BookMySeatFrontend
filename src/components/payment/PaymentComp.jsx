@@ -21,13 +21,13 @@ const PaymentComp = ({ props }) => {
     }
 
     const displayRazorPay = async () => {
-        // const res = await loadRazorpay()
+
 
         await loadRazorpay()
 
         await axios.post(`${BASE_URL}razorpay`, { totalPrice: props.totalPrice }).then((res) => {
             setData(res.data)
-            // console.log(res.data)
+
         }).catch((error) => console.log(error))
 
         var options = {
